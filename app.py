@@ -141,8 +141,8 @@ df = load_data()
 df = remove_outliers(df)
 df = add_features(df)
 model, scaler, X_scaled, y_scaled, X_scaled_columns = train_model(df, features)
-X_scaled_columns = X_scaled.columns.tolist()  # ✅ Get column names
-history = df.copy()                           # ✅ Make sure it's a DataFrame
+X_scaled_columns = X_scaled.columns.tolist() 
+history = df.copy()                           
 
 with st.sidebar:
     st.markdown("<h2 style='text-align: center;'>B202 Sprayer</h2>", unsafe_allow_html=True)
