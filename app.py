@@ -15,7 +15,7 @@ def load_data():
     return df
 
 # === REMOVE OUTLIERS ===
-def remove_outliers(df, col='Sản lượng', lower=0.25, upper=0.75, threshold=1.7):
+def remove_outliers(df, col='Sản lượng', lower=0.25, upper=0.75, threshold=1.2):
     Q1 = df[col].quantile(lower)
     Q3 = df[col].quantile(upper)
     IQR = Q3 - Q1
